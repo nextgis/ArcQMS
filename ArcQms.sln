@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcQms", "ArcQms\ArcQms.csproj", "{501036A0-A949-4E35-A8BF-B375CD6D20C3}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ArcQmsSetup", "ArcQmsSetup\ArcQmsSetup.vdproj", "{B872F422-4F55-4E2C-92E1-244C55F7DDCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Portable|Any CPU = Debug Portable|Any CPU
+		Debug Portable|x86 = Debug Portable|x86
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release Portable|Any CPU = Release Portable|Any CPU
+		Release Portable|x86 = Release Portable|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{501036A0-A949-4E35-A8BF-B375CD6D20C3}.Debug Portable|Any CPU.ActiveCfg = Debug|Any CPU
+		{501036A0-A949-4E35-A8BF-B375CD6D20C3}.Debug Portable|Any CPU.Build.0 = Debug|Any CPU
+		{501036A0-A949-4E35-A8BF-B375CD6D20C3}.Debug Portable|x86.ActiveCfg = Debug|Any CPU
+		{501036A0-A949-4E35-A8BF-B375CD6D20C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{501036A0-A949-4E35-A8BF-B375CD6D20C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{501036A0-A949-4E35-A8BF-B375CD6D20C3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{501036A0-A949-4E35-A8BF-B375CD6D20C3}.Release Portable|Any CPU.ActiveCfg = Release|Any CPU
+		{501036A0-A949-4E35-A8BF-B375CD6D20C3}.Release Portable|Any CPU.Build.0 = Release|Any CPU
+		{501036A0-A949-4E35-A8BF-B375CD6D20C3}.Release Portable|x86.ActiveCfg = Release|Any CPU
+		{501036A0-A949-4E35-A8BF-B375CD6D20C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{501036A0-A949-4E35-A8BF-B375CD6D20C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{501036A0-A949-4E35-A8BF-B375CD6D20C3}.Release|x86.ActiveCfg = Release|Any CPU
+		{B872F422-4F55-4E2C-92E1-244C55F7DDCA}.Debug Portable|Any CPU.ActiveCfg = Debug
+		{B872F422-4F55-4E2C-92E1-244C55F7DDCA}.Debug Portable|x86.ActiveCfg = Debug
+		{B872F422-4F55-4E2C-92E1-244C55F7DDCA}.Debug Portable|x86.Build.0 = Debug
+		{B872F422-4F55-4E2C-92E1-244C55F7DDCA}.Debug|Any CPU.ActiveCfg = Debug
+		{B872F422-4F55-4E2C-92E1-244C55F7DDCA}.Debug|Any CPU.Build.0 = Debug
+		{B872F422-4F55-4E2C-92E1-244C55F7DDCA}.Debug|x86.ActiveCfg = Debug
+		{B872F422-4F55-4E2C-92E1-244C55F7DDCA}.Debug|x86.Build.0 = Debug
+		{B872F422-4F55-4E2C-92E1-244C55F7DDCA}.Release Portable|Any CPU.ActiveCfg = Release
+		{B872F422-4F55-4E2C-92E1-244C55F7DDCA}.Release Portable|Any CPU.Build.0 = Release
+		{B872F422-4F55-4E2C-92E1-244C55F7DDCA}.Release Portable|x86.ActiveCfg = Release
+		{B872F422-4F55-4E2C-92E1-244C55F7DDCA}.Release Portable|x86.Build.0 = Release
+		{B872F422-4F55-4E2C-92E1-244C55F7DDCA}.Release|Any CPU.ActiveCfg = Release
+		{B872F422-4F55-4E2C-92E1-244C55F7DDCA}.Release|Any CPU.Build.0 = Release
+		{B872F422-4F55-4E2C-92E1-244C55F7DDCA}.Release|x86.ActiveCfg = Release
+		{B872F422-4F55-4E2C-92E1-244C55F7DDCA}.Release|x86.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

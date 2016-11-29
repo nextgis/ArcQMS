@@ -1,0 +1,1 @@
+"c:\Program Files (x86)\Common Files\ArcGIS\bin\ESRIRegAsm.exe" ArcQms.dll /p:desktop /u
