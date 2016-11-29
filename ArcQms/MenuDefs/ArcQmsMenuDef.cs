@@ -1,4 +1,5 @@
 ﻿using ESRI.ArcGIS.SystemUI;
+using LocalizationMenu = ArcQms.Localization.Menu.ArcQmsMenuDef.Resource;
 
 namespace ArcQms.MenuDefs
 {
@@ -6,7 +7,7 @@ namespace ArcQms.MenuDefs
     {
         public string Caption
         {
-            get { return "&ArcQms 0.1"; }
+            get { return LocalizationMenu.Caption; }
         }
 
         public void GetItemInfo(int pos, IItemDef itemDef)
