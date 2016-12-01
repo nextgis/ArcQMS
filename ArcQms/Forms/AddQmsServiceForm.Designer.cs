@@ -31,65 +31,29 @@ namespace ArcQms.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddQmsServiceForm));
-            this.lbQmsServices = new System.Windows.Forms.ListBox();
-            this.tbfilterServices = new System.Windows.Forms.TextBox();
-            this.btnAddQmsService = new System.Windows.Forms.Button();
-            this.wbQmsService = new System.Windows.Forms.WebBrowser();
+            this.wpfAddQmsService = new System.Windows.Forms.Integration.ElementHost();
+            this.addQmsServiceControl1 = new ArcQms.Forms.AddQmsServiceControl();
             this.SuspendLayout();
             // 
-            // lbQmsServices
+            // wpfAddQmsService
             // 
-            this.lbQmsServices.FormattingEnabled = true;
-            resources.ApplyResources(this.lbQmsServices, "lbQmsServices");
-            this.lbQmsServices.Name = "lbQmsServices";
-            this.lbQmsServices.SelectedIndexChanged += new System.EventHandler(this.lbQmsServices_SelectedIndexChanged);
+            resources.ApplyResources(this.wpfAddQmsService, "wpfAddQmsService");
+            this.wpfAddQmsService.Name = "wpfAddQmsService";
+            this.wpfAddQmsService.Child = this.addQmsServiceControl1;
             // 
-            // tbfilterServices
+            // AddQmsServiceForm
             // 
-            resources.ApplyResources(this.tbfilterServices, "tbfilterServices");
-            this.tbfilterServices.Name = "tbfilterServices";
-            this.tbfilterServices.TextChanged += new System.EventHandler(this.tbfilterServices_TextChanged);
-            // 
-            // btnAddQmsService
-            // 
-            this.btnAddQmsService.DialogResult = System.Windows.Forms.DialogResult.OK;
-            resources.ApplyResources(this.btnAddQmsService, "btnAddQmsService");
-            this.btnAddQmsService.Name = "btnAddQmsService";
-            this.btnAddQmsService.UseVisualStyleBackColor = true;
-            this.btnAddQmsService.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // wbQmsService
-            // 
-            this.wbQmsService.AllowWebBrowserDrop = false;
-            this.wbQmsService.CausesValidation = false;
-            this.wbQmsService.IsWebBrowserContextMenuEnabled = false;
-            resources.ApplyResources(this.wbQmsService, "wbQmsService");
-            this.wbQmsService.Name = "wbQmsService";
-            this.wbQmsService.ScriptErrorsSuppressed = true;
-            this.wbQmsService.Url = new System.Uri("https://qms.nextgis.com/geoservices/464/", System.UriKind.Absolute);
-            this.wbQmsService.WebBrowserShortcutsEnabled = false;
-            // 
-            // AddQmsService
-            // 
-            this.AcceptButton = this.btnAddQmsService;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.wbQmsService);
-            this.Controls.Add(this.btnAddQmsService);
-            this.Controls.Add(this.tbfilterServices);
-            this.Controls.Add(this.lbQmsServices);
+            this.Controls.Add(this.wpfAddQmsService);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "AddQmsService";
+            this.Name = "AddQmsServiceForm";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox lbQmsServices;
-        private System.Windows.Forms.TextBox tbfilterServices;
-        private System.Windows.Forms.Button btnAddQmsService;
-        private System.Windows.Forms.WebBrowser wbQmsService;
+        private System.Windows.Forms.Integration.ElementHost wpfAddQmsService;
+        private AddQmsServiceControl addQmsServiceControl1;
     }
 }

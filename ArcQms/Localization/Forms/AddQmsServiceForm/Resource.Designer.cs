@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ArcQms.Localization.Forms.AddQmsService {
+namespace ArcQms.Localization.Forms.AddQmsServiceForm {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ArcQms.Localization.Forms.AddQmsService {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ArcQms.Localization.Forms.AddQmsService.Resource", typeof(Resource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ArcQms.Localization.Forms.AddQmsServiceForm.Resource", typeof(Resource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

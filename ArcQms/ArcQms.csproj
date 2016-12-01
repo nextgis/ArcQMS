@@ -65,21 +65,13 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ArcBruTile, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="BruTile, Version=0.8.6.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Libs\ArcBruTile\ArcBruTile.dll</HintPath>
+      <HintPath>Libs\BruTile\BruTile.dll</HintPath>
     </Reference>
-    <Reference Include="BruTile, Version=0.18.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BruTile.0.18.2\lib\net40\BruTile.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="BruTile.Desktop, Version=0.18.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BruTile.Desktop.0.18.2\lib\net40\BruTile.Desktop.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="BruTile.MbTiles, Version=0.18.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BruTile.Desktop.0.18.2\lib\net40\BruTile.MbTiles.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="BruTile.Desktop, Version=0.8.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\BruTile\BruTile.Desktop.dll</HintPath>
     </Reference>
     <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -147,6 +139,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\SqlServer\Microsoft.ExceptionMessageBox.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -207,13 +204,81 @@
       <DependentUpon>ArcQmsInstaller.cs</DependentUpon>
     </Compile>
     <Compile Include="Commands\AddQmsServiceCommand.cs" />
+    <Compile Include="Forms\AddQmsServiceControl.xaml.cs">
+      <DependentUpon>AddQmsServiceControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddQmsServiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AddQmsServiceForm.Designer.cs">
       <DependentUpon>AddQmsServiceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Localization\Forms\AddQmsService\Resource.Designer.cs">
+    <Compile Include="Forms\ViewModel\ModelBase.cs" />
+    <Compile Include="Forms\ViewModel\QmsServiceDetailDictItem.cs" />
+    <Compile Include="Forms\ViewModel\QmsServiceDetailProperty.cs" />
+    <Compile Include="Hepers\ReflectionExtensions.cs" />
+    <Compile Include="Libs\ArcBruTile\ArcMapWindow.cs" />
+    <Compile Include="Libs\ArcBruTile\AuthKeyRetriever.cs" />
+    <Compile Include="Libs\ArcBruTile\BaiduConfig.cs" />
+    <Compile Include="Libs\ArcBruTile\BaiduTileSchema.cs" />
+    <Compile Include="Libs\ArcBruTile\BaseGroupLayer.cs" />
+    <Compile Include="Libs\ArcBruTile\BruTileCustomLayer.cs" />
+    <Compile Include="Libs\ArcBruTile\BruTileHelper.cs" />
+    <Compile Include="Libs\ArcBruTile\BruTileLayer.cs" />
+    <Compile Include="Libs\ArcBruTile\CacheDirectory.cs" />
+    <Compile Include="Libs\ArcBruTile\CacheSettings.cs" />
+    <Compile Include="Libs\ArcBruTile\ConfigBing.cs" />
+    <Compile Include="Libs\ArcBruTile\ConfigBingHybrid.cs" />
+    <Compile Include="Libs\ArcBruTile\ConfigGisCloud.cs" />
+    <Compile Include="Libs\ArcBruTile\ConfigHelper.cs" />
+    <Compile Include="Libs\ArcBruTile\ConfigInvertedTMS.cs" />
+    <Compile Include="Libs\ArcBruTile\ConfigOsm.cs" />
+    <Compile Include="Libs\ArcBruTile\ConfigTms.cs" />
+    <Compile Include="Libs\ArcBruTile\ConfigurationHelper.cs" />
+    <Compile Include="Libs\ArcBruTile\ConfigWmsC.cs" />
+    <Compile Include="Libs\ArcBruTile\DaumConfig.cs" />
+    <Compile Include="Libs\ArcBruTile\DaumRequest.cs" />
+    <Compile Include="Libs\ArcBruTile\DaumTileSchema.cs" />
+    <Compile Include="Libs\ArcBruTile\EnumBruTileLayer.cs" />
+    <Compile Include="Libs\ArcBruTile\EnvelopeExtensionMethods.cs" />
+    <Compile Include="Libs\ArcBruTile\FetchStrategy.cs" />
+    <Compile Include="Libs\ArcBruTile\FileCacheExtensionMethods.cs" />
+    <Compile Include="Libs\ArcBruTile\FileFetcher.cs" />
+    <Compile Include="Libs\ArcBruTile\GisCloudApiRetriever.cs" />
+    <Compile Include="Libs\ArcBruTile\GISCloudLayer.cs" />
+    <Compile Include="Libs\ArcBruTile\GisCloudUtil.cs" />
+    <Compile Include="Libs\ArcBruTile\GZipWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Libs\ArcBruTile\IConfig.cs" />
+    <Compile Include="Libs\ArcBruTile\ImageDrawer.cs" />
+    <Compile Include="Libs\ArcBruTile\ImageProcessor.cs" />
+    <Compile Include="Libs\ArcBruTile\MapBoxVectorTileSource.cs" />
+    <Compile Include="Libs\ArcBruTile\MultipleThreadResetEvent.cs" />
+    <Compile Include="Libs\ArcBruTile\MvtSubLayer.cs" />
+    <Compile Include="Libs\ArcBruTile\NaverConfig.cs" />
+    <Compile Include="Libs\ArcBruTile\NaverTileSchema.cs" />
+    <Compile Include="Libs\ArcBruTile\NokiaConfig.cs" />
+    <Compile Include="Libs\ArcBruTile\OsmMapType.cs" />
+    <Compile Include="Libs\ArcBruTile\Projector.cs" />
+    <Compile Include="Libs\ArcBruTile\Requester.cs" />
+    <Compile Include="Libs\ArcBruTile\SimpleFileFetcher.cs" />
+    <Compile Include="Libs\ArcBruTile\SpatialReferences.cs" />
+    <Compile Include="Libs\ArcBruTile\Tile.cs" />
+    <Compile Include="Libs\ArcBruTile\TileCalculator.cs" />
+    <Compile Include="Libs\ArcBruTile\TileLayerConfig.cs" />
+    <Compile Include="Libs\ArcBruTile\TileMap.cs" />
+    <Compile Include="Libs\ArcBruTile\TmsTileMapServiceParser.cs" />
+    <Compile Include="Libs\ArcBruTile\Transform.cs" />
+    <Compile Include="Libs\ArcBruTile\WorldFileWriter.cs" />
+    <Compile Include="Libs\ArcBruTile\WorldToScreen.cs" />
+    <Compile Include="Libs\ArcBruTile\YandexConfig.cs" />
+    <Compile Include="Localization\Forms\AddQmsServiceControl\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\Forms\AddQmsServiceForm\Resource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
@@ -250,17 +315,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Libs\ArcBruTile\ArcBruTile.dll.config" />
+    <Content Include="Libs\BruTile\BruTile.Desktop.dll" />
+    <Content Include="Libs\BruTile\BruTile.Desktop.pdb" />
+    <Content Include="Libs\BruTile\BruTile.dll" />
+    <Content Include="Libs\BruTile\BruTile.pdb" />
     <None Include="packages.config" />
-    <None Include="unregister.bat">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="unregister.bat" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\AddQmsServiceForm.resx">
       <DependentUpon>AddQmsServiceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Localization\Forms\AddQmsService\Resource.resx">
+    <EmbeddedResource Include="Localization\Forms\AddQmsServiceControl\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\Forms\AddQmsServiceForm\Resource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -269,15 +339,15 @@
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Localization\Model\QmsServiceDetail\Resource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Localization\Model\QmsServiceInfo\Resource-ru.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource-ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Localization\Model\QmsServiceInfo\Resource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -287,16 +357,12 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="register.bat">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="register.bat" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Libs\ArcBruTile\ArcBruTile.dll" />
-    <Content Include="Libs\ArcBruTile\ArcBruTile.pdb" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -315,6 +381,12 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Page Include="Forms\AddQmsServiceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(SQLDBExtensionsRefPath)' != ''" />
@@ -329,6 +401,9 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.94.0\build\net45\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.94.0\build\net45\System.Data.SQLite.Core.targets'))" />
   </Target>
+  <PropertyGroup>
+    <PreBuildEvent>if not exist "$(TargetDir)tiles" mkdir "$(TargetDir)tiles"</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

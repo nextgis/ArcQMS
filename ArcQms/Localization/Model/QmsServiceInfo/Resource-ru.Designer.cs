@@ -22,7 +22,7 @@ namespace ArcQms.Localization.Model.QmsServiceInfo {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resource_ru {
+    public class Resource_ru {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace ArcQms.Localization.Model.QmsServiceInfo {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ArcQms.Localization.Model.QmsServiceInfo.Resource-ru", typeof(Resource_ru).Assembly);
@@ -51,7 +51,7 @@ namespace ArcQms.Localization.Model.QmsServiceInfo {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace ArcQms.Localization.Model.QmsServiceInfo {
         /// <summary>
         ///   Looks up a localized string similar to Описание.
         /// </summary>
-        internal static string Description {
+        public static string Description {
             get {
                 return ResourceManager.GetString("Description", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace ArcQms.Localization.Model.QmsServiceInfo {
         /// <summary>
         ///   Looks up a localized string similar to Проекция.
         /// </summary>
-        internal static string Epsg {
+        public static string Epsg {
             get {
                 return ResourceManager.GetString("Epsg", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace ArcQms.Localization.Model.QmsServiceInfo {
         /// <summary>
         ///   Looks up a localized string similar to Уникальный идентификатор.
         /// </summary>
-        internal static string Guid {
+        public static string Guid {
             get {
                 return ResourceManager.GetString("Guid", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace ArcQms.Localization.Model.QmsServiceInfo {
         /// <summary>
         ///   Looks up a localized string similar to Идентификатор.
         /// </summary>
-        internal static string Id {
+        public static string Id {
             get {
                 return ResourceManager.GetString("Id", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace ArcQms.Localization.Model.QmsServiceInfo {
         /// <summary>
         ///   Looks up a localized string similar to Название.
         /// </summary>
-        internal static string Name {
+        public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace ArcQms.Localization.Model.QmsServiceInfo {
         /// <summary>
         ///   Looks up a localized string similar to Тип сервиса.
         /// </summary>
-        internal static string Type {
+        public static string Type {
             get {
                 return ResourceManager.GetString("Type", resourceCulture);
             }

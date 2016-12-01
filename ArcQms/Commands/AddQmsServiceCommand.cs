@@ -57,7 +57,6 @@ namespace ArcQms.Commands
                 var mxdoc = (IMxDocument)_application.Document;
                 _map = mxdoc.FocusMap;
 
-
                 var addQmsService = new AddQmsServiceForm();
                 var result = addQmsService.ShowDialog(new ArcMapWindow(_application));
 
@@ -66,7 +65,21 @@ namespace ArcQms.Commands
                     var url = addQmsService.QmsServiceDetail.Url;
                     var name = addQmsService.QmsServiceDetail.Name;
 
-                    var layerType = EnumBruTileLayer.InvertedTMS;
+                    EnumBruTileLayer layerType = EnumBruTileLayer.Giscloud;
+                    if (addQmsService.QmsServiceDetail.Type == "tms" && 
+                        addQmsService.QmsServiceDetail.YOriginTop)
+                    {
+                        layerType = EnumBruTileLayer.InvertedTMS;
+                    }
+
+                    if (addQmsService.QmsServiceDetail.Type == "tms" &&
+                        !addQmsService.QmsServiceDetail.YOriginTop)
+                    {
+                        layerType = EnumBruTileLayer.TMS;
+                    }
+
+                    if (layerType == EnumBruTileLayer.Giscloud) return;
+
                     var tileLayerConfig = new TileLayerConfig(name, url);
                     var brutileLayer = new BruTileLayer(_application, tileLayerConfig, layerType)
                     {

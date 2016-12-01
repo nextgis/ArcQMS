@@ -117,54 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="wpfAddQmsService.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+  <data name="TabMapWeb" xml:space="preserve">
+    <value>Metadata (map)</value>
   </data>
-  <data name="wpfAddQmsService.Size" type="System.Drawing.Size, System.Drawing">
-    <value>623, 369</value>
+  <data name="TabMetadata" xml:space="preserve">
+    <value>Metadata</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="wpfAddQmsService.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="wpfAddQmsService.Text" xml:space="preserve">
-    <value>elementHost1</value>
-  </data>
-  <data name="&gt;&gt;wpfAddQmsService.Name" xml:space="preserve">
-    <value>wpfAddQmsService</value>
-  </data>
-  <data name="&gt;&gt;wpfAddQmsService.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Integration.ElementHost, WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
-  </data>
-  <data name="&gt;&gt;wpfAddQmsService.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;wpfAddQmsService.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>647, 393</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Добавить QMS сервис</value>
-  </data>
-  <data name="&gt;&gt;addQmsServiceControl1.Name" xml:space="preserve">
-    <value>addQmsServiceControl1</value>
-  </data>
-  <data name="&gt;&gt;addQmsServiceControl1.Type" xml:space="preserve">
-    <value>WindowsFormsIntegration.Design.HostedComponent, WindowsFormsIntegration.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>AddQmsServiceForm</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="TabMetadataWeb" xml:space="preserve">
+    <value>Metadata (web)</value>
   </data>
 </root>

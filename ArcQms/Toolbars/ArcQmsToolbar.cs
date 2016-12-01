@@ -10,7 +10,7 @@ using ArcQms.MenuDefs;
 
 namespace ArcQms.Toolbars
 {
-    [Guid("958d52bc-37d8-4296-848c-28d6736f1ab0")]
+    [Guid("f1636a4d-9653-403e-b0cf-e0e2c6d65f28")]
     [ClassInterface(ClassInterfaceType.None)]
     [ProgId("ArcQms.Toolbars.ArcQmsToolbar")]
     public sealed class ArcQmsToolbar : BaseToolbar

@@ -57,7 +57,7 @@ namespace ArcQms.Model
 
         [JsonProperty("y_origin_top")]
         [Display(ResourceType = typeof(ClassLocalization.Resource), Name = "YOriginTop")]
-        public string YOriginTop { get; set; }
+        public bool YOriginTop { get; set; }
 
         [JsonProperty("icon")]
         [Display(ResourceType = typeof(ClassLocalization.Resource), Name = "IconId")]

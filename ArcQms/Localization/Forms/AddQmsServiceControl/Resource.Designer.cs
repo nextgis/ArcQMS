@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ArcQms.Localization.Model.QmsServiceInfo {
+namespace ArcQms.Localization.Forms.AddQmsServiceControl {
     using System;
     
     
@@ -22,7 +22,7 @@ namespace ArcQms.Localization.Model.QmsServiceInfo {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resource {
+    internal class Resource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,10 +36,10 @@ namespace ArcQms.Localization.Model.QmsServiceInfo {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ArcQms.Localization.Model.QmsServiceInfo.Resource", typeof(Resource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ArcQms.Localization.Forms.AddQmsServiceControl.Resource", typeof(Resource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace ArcQms.Localization.Model.QmsServiceInfo {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,56 +61,29 @@ namespace ArcQms.Localization.Model.QmsServiceInfo {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Description.
+        ///   Looks up a localized string similar to Metadata (map).
         /// </summary>
-        public static string Description {
+        internal static string TabMapWeb {
             get {
-                return ResourceManager.GetString("Description", resourceCulture);
+                return ResourceManager.GetString("TabMapWeb", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Spatial Reference.
+        ///   Looks up a localized string similar to Metadata.
         /// </summary>
-        public static string Epsg {
+        internal static string TabMetadata {
             get {
-                return ResourceManager.GetString("Epsg", resourceCulture);
+                return ResourceManager.GetString("TabMetadata", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to GUID.
+        ///   Looks up a localized string similar to Metadata (web).
         /// </summary>
-        public static string Guid {
+        internal static string TabMetadataWeb {
             get {
-                return ResourceManager.GetString("Guid", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Id.
-        /// </summary>
-        public static string Id {
-            get {
-                return ResourceManager.GetString("Id", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Name.
-        /// </summary>
-        public static string Name {
-            get {
-                return ResourceManager.GetString("Name", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Service type.
-        /// </summary>
-        public static string Type {
-            get {
-                return ResourceManager.GetString("Type", resourceCulture);
+                return ResourceManager.GetString("TabMetadataWeb", resourceCulture);
             }
         }
     }

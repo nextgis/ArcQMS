@@ -22,7 +22,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resource {
+    public class Resource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ArcQms.Localization.Model.QmsServiceDetail.Resource", typeof(Resource).Assembly);
@@ -51,7 +51,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         /// <summary>
         ///   Looks up a localized string similar to Copyright.
         /// </summary>
-        internal static string CopyrightText {
+        public static string CopyrightText {
             get {
                 return ResourceManager.GetString("CopyrightText", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         /// <summary>
         ///   Looks up a localized string similar to Url of copyright.
         /// </summary>
-        internal static string CopyrightUrl {
+        public static string CopyrightUrl {
             get {
                 return ResourceManager.GetString("CopyrightUrl", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         /// <summary>
         ///   Looks up a localized string similar to Created date.
         /// </summary>
-        internal static string Created {
+        public static string Created {
             get {
                 return ResourceManager.GetString("Created", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         /// <summary>
         ///   Looks up a localized string similar to Icon.
         /// </summary>
-        internal static string IconId {
+        public static string IconId {
             get {
                 return ResourceManager.GetString("IconId", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         /// <summary>
         ///   Looks up a localized string similar to License.
         /// </summary>
-        internal static string LicenseName {
+        public static string LicenseName {
             get {
                 return ResourceManager.GetString("LicenseName", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         /// <summary>
         ///   Looks up a localized string similar to Url of license.
         /// </summary>
-        internal static string LicenseUrl {
+        public static string LicenseUrl {
             get {
                 return ResourceManager.GetString("LicenseUrl", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         /// <summary>
         ///   Looks up a localized string similar to Source.
         /// </summary>
-        internal static string Source {
+        public static string Source {
             get {
                 return ResourceManager.GetString("Source", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         /// <summary>
         ///   Looks up a localized string similar to Url of source.
         /// </summary>
-        internal static string SourceUrl {
+        public static string SourceUrl {
             get {
                 return ResourceManager.GetString("SourceUrl", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         /// <summary>
         ///   Looks up a localized string similar to Submitter.
         /// </summary>
-        internal static string Submitter {
+        public static string Submitter {
             get {
                 return ResourceManager.GetString("Submitter", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         /// <summary>
         ///   Looks up a localized string similar to Url terms of use.
         /// </summary>
-        internal static string TermsOfUseUrl {
+        public static string TermsOfUseUrl {
             get {
                 return ResourceManager.GetString("TermsOfUseUrl", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         /// <summary>
         ///   Looks up a localized string similar to Last update date.
         /// </summary>
-        internal static string Updated {
+        public static string Updated {
             get {
                 return ResourceManager.GetString("Updated", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         /// <summary>
         ///   Looks up a localized string similar to Service url.
         /// </summary>
-        internal static string Url {
+        public static string Url {
             get {
                 return ResourceManager.GetString("Url", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         /// <summary>
         ///   Looks up a localized string similar to Y Origin Top.
         /// </summary>
-        internal static string YOriginTop {
+        public static string YOriginTop {
             get {
                 return ResourceManager.GetString("YOriginTop", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         /// <summary>
         ///   Looks up a localized string similar to Maximum Z.
         /// </summary>
-        internal static string ZMax {
+        public static string ZMax {
             get {
                 return ResourceManager.GetString("ZMax", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace ArcQms.Localization.Model.QmsServiceDetail {
         /// <summary>
         ///   Looks up a localized string similar to Minimum Z.
         /// </summary>
-        internal static string ZMin {
+        public static string ZMin {
             get {
                 return ResourceManager.GetString("ZMin", resourceCulture);
             }
