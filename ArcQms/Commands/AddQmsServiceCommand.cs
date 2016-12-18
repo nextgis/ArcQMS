@@ -9,6 +9,8 @@ using ESRI.ArcGIS.Framework;
 using BrutileArcGIS.lib;
 using BrutileArcGIS.Lib;
 using ArcQms.Forms;
+using ESRI.ArcGIS.GISClient;
+using ESRI.ArcGIS.esriSystem;
 
 namespace ArcQms.Commands
 {
@@ -60,32 +62,40 @@ namespace ArcQms.Commands
                 var addQmsService = new AddQmsServiceForm();
                 var result = addQmsService.ShowDialog(new ArcMapWindow(_application));
 
+                BruTileLayer brutileLayer = null;
+
                 if (result == DialogResult.OK)
                 {
                     var url = addQmsService.QmsServiceDetail.Url;
                     var name = addQmsService.QmsServiceDetail.Name;
 
                     EnumBruTileLayer layerType = EnumBruTileLayer.Giscloud;
-                    if (addQmsService.QmsServiceDetail.Type == "tms" && 
+                    if (addQmsService.QmsServiceDetail.Type == "tms" &&
                         addQmsService.QmsServiceDetail.YOriginTop)
                     {
                         layerType = EnumBruTileLayer.InvertedTMS;
+                        var tileLayerConfig = new TileLayerConfig(name, url);
+                        brutileLayer = new BruTileLayer(_application, tileLayerConfig, layerType)
+                        {
+                            Name = name,
+                            Visible = true
+                        };
                     }
 
                     if (addQmsService.QmsServiceDetail.Type == "tms" &&
                         !addQmsService.QmsServiceDetail.YOriginTop)
                     {
-                        layerType = EnumBruTileLayer.TMS;
+                        layerType = EnumBruTileLayer.InvertedTMS;
+                        var tileLayerConfig = new TileLayerConfig(name, url);
+                        brutileLayer = new BruTileLayer(_application, tileLayerConfig, layerType)
+                        {
+                            Name = name,
+                            Visible = true
+                        };
                     }
 
                     if (layerType == EnumBruTileLayer.Giscloud) return;
 
-                    var tileLayerConfig = new TileLayerConfig(name, url);
-                    var brutileLayer = new BruTileLayer(_application, tileLayerConfig, layerType)
-                    {
-                        Name = name,
-                        Visible = true
-                    };
                     ((IMapLayers)_map).InsertLayer(brutileLayer, true, 0);
                 }
             }
@@ -95,5 +105,53 @@ namespace ArcQms.Commands
             }
         }
 
+        //public void load_wms(ESRI.ArcGIS.Controls.AxMapControl mapcontrol)
+        //{
+
+        //    // Create an WMSMapLayer Instance - this will be added to the map later
+
+        //    IWMSGroupLayer wmsMapLayer = new WMSMapLayerClass();
+        //    // create and configure wms connection name
+        //    // this is used to store the connection properties
+
+        //    IWMSConnectionName connName = new WMSConnectionNameClass();
+
+        //    IPropertySet propSet = new PropertySetClass();
+        //    propSet.SetProperty("URL", "http://173.244.165.194/geoserver/Land_Managment/wms?");
+        //    connName.ConnectionProperties = propSet;
+
+
+        //    // uses the name information to connect to the service
+        //    IDataLayer dataLayer = (IDataLayer)wmsMapLayer;
+        //    dataLayer.Connect((IName)connName);
+
+        //    // get service description out of the layer
+        //    // the service description contains inforamtion about the wms categories
+        //    // and layers supported by the service
+
+        //    IWMSServiceDescription serviceDesc = wmsMapLayer.WMSServiceDescription;
+        //    IWMSLayerDescription groupDesc = serviceDesc.LayerDescription[0];
+
+
+        //    // for each wms layer either add the stand-alone layer or
+        //    // group layer to the WMSMapLayer which will be added to ArcMap
+        //    for (int i = 0; i < groupDesc.LayerDescriptionCount - 1; i++)
+        //    {
+        //        IWMSLayerDescription layerDesc = groupDesc.LayerDescription[i];
+
+        //        //  if (layerDesc.Title == WMSLayers.SelectedItem.ToString())//Checking if this is the selected layer
+        //        // {
+        //        // Configure the layer before adding it to the map
+        //        ILayer newLayer;
+        //        IWMSLayer newWMSLayer = wmsMapLayer.CreateWMSLayer(layerDesc);
+        //        newLayer = (ILayer)newWMSLayer;
+        //        wmsMapLayer.InsertLayer(newLayer, 0);
+        //        // add layer to Map
+
+        //        mapcontrol.AddLayer((ILayer)wmsMapLayer);
+        //        IActiveView activeview = (IActiveView)mapcontrol.ActiveView;
+        //        activeview.Refresh();
+        //    }
+        //}
     }
 }

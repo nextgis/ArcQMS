@@ -39,12 +39,12 @@ namespace ArcQms.Forms
             BindControls();
             BindingOperations.EnableCollectionSynchronization(this.qmsServices, _lock);
             StartWebRequest();
-            this.wbMetadata.Navigate(new Uri("https://qms.nextgis.com/geoservices/464/"));
         }
 
         ICollectionView viewQmsSerices;
         private void BindControls()
         {
+
             this.viewQmsSerices = CollectionViewSource.GetDefaultView(this.qmsServices);
             this.lbQmsServices.ItemsSource = this.viewQmsSerices;
             QmsServiceDetailProperty.PropertyChanged += new PropertyChangedEventHandler(QmsServiceDetailProperty_PropertyChanged);
@@ -65,10 +65,7 @@ namespace ArcQms.Forms
 
             Dispatcher.InvokeAsync(() =>
             {
-                this.wbMetadata.Visibility = Visibility.Hidden;
                 this.btnServiceOnMap.IsEnabled = true;
-                this.wbMetadata.Navigate(new Uri(string.Format(QmsServiceWebPage, qmsServiceDetail.Id)));
-
                 var keyValues = ReflectionExtensions.GetValues<QmsServiceDetail>(qmsServiceDetail);
                 this.dgMetadata.ItemsSource = keyValues.OrderBy(kv => kv.Key);
             });
@@ -131,19 +128,6 @@ namespace ArcQms.Forms
             {
 
             }
-        }
-
-        private void wbMetadata_LoadCompleted(object sender, NavigationEventArgs e)
-        {
-            AddStyles(this.wbMetadata, new List<KeyValuePair<string, string>>()
-                    {
-                        new KeyValuePair<string, string>("header", "display: none;"),
-                        new KeyValuePair<string, string>("div.admin__panel__content", "padding-top: 0;"),
-                        new KeyValuePair<string, string>("footer", "display: none;"),
-                        new KeyValuePair<string, string>("div.btn-group.toolbar.pull-right", "display: none;")
-
-                    });
-            this.wbMetadata.Visibility = Visibility.Visible;
         }
 
         void lbQmsServices_OnSelection(object sender, SelectionChangedEventArgs args)

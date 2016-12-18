@@ -351,12 +351,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_337F03F03F3E4FA0ACEAD385B3927FE9"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_38307F5150EB364ADD4EA4C9C625D942"
         "OwnerKey" = "8:_016F6FA7D7FE49ADA8E840FFD0113822"
         "MsmSig" = "8:_UNDEFINED"
@@ -629,6 +623,12 @@
         {
         "MsmKey" = "8:_71D8C2C89ADFC309F85DAB2203E1B525"
         "OwnerKey" = "8:_79A2D75D99870FB9F62082BC1EC76CEE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7310CA11E8464CD4BAE08B4B02CDF549"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1972,18 +1972,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3A3EFA51037F45FBC4C17132CA952127"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F56B03E5668800FF864054F47D74EF8F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_B8CB9B75E6562EF474DCE490209EFD63"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2002,6 +1990,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_AC2F370EF535AD226FC39AC7D7E84AF5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_97B9BDB66C5F69C610F1D702BD4B735E"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2009,12 +2003,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_090F6D9901FC0A1D893B7BD82AAB117D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AC2F370EF535AD226FC39AC7D7E84AF5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2039,6 +2027,18 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_227456A5A7CB7E5BA2B1C7273B7F04AA"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3A3EFA51037F45FBC4C17132CA952127"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_F56B03E5668800FF864054F47D74EF8F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2593,20 +2593,6 @@
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_06488AFF84144B0DA42A96C632EF8674"
-            {
-            "Name" = "8:Primary output from ArcQms (Active)"
-            "Condition" = "8:"
-            "Object" = "8:_016F6FA7D7FE49ADA8E840FFD0113822"
-            "FileType" = "3:1"
-            "InstallAction" = "3:4"
-            "Arguments" = "8:"
-            "EntryPoint" = "8:"
-            "Sequence" = "3:1"
-            "Identifier" = "8:_9ABB4170_F45A_4C2D_ADDA_673C66017D40"
-            "InstallerClass" = "11:TRUE"
-            "CustomActionData" = "8:"
-            }
             "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_987272E133C04DB1A607B3EC4CD3204A"
             {
             "Name" = "8:Primary output from ArcQms (Active)"
@@ -3331,26 +3317,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_337F03F03F3E4FA0ACEAD385B3927FE9"
-            {
-            "SourcePath" = "8:..\\ArcQms\\bin\\ArcQms.dll.config"
-            "TargetName" = "8:ArcQms.dll.config"
-            "Tag" = "8:"
-            "Folder" = "8:_8B85F51EA044456DB3D544ACF9F1C010"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_38307F5150EB364ADD4EA4C9C625D942"
             {
             "AssemblyRegister" = "3:1"
@@ -3976,6 +3942,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7310CA11E8464CD4BAE08B4B02CDF549"
+            {
+            "SourcePath" = "8:..\\ArcQms\\bin\\ArcQms.dll.config"
+            "TargetName" = "8:ArcQms.dll.config"
+            "Tag" = "8:"
+            "Folder" = "8:_8B85F51EA044456DB3D544ACF9F1C010"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_73BD4BB23DDBBC37E2204AE07B07E455"
@@ -6135,50 +6121,6 @@
         }
         "Folder"
         {
-            "{1525181F-901A-416C-8A58-119130FE478E}:_250B95AFA1C04B86B40D0366EABB7AF2"
-            {
-            "Name" = "8:#1915"
-            "AlwaysCreate" = "11:TRUE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Property" = "8:AppDataFolder"
-                "Folders"
-                {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_2D2169ADD28645B7879BFFF5C3AF496B"
-                    {
-                    "Name" = "8:NextGIS"
-                    "AlwaysCreate" = "11:TRUE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_6D980EA47FCA4398AE28853947F3E313"
-                        "Folders"
-                        {
-                            "{9EF0B969-E518-4E46-987F-47570745A589}:_37FC857731FE4282BAAE74B96E84C8B0"
-                            {
-                            "Name" = "8:ArcQms"
-                            "AlwaysCreate" = "11:TRUE"
-                            "Condition" = "8:"
-                            "Transitive" = "11:FALSE"
-                            "Property" = "8:_69AD32616CB34BDEAC4B214C2FEC4250"
-                                "Folders"
-                                {
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_67F7380EB78240BFB46D69F7BAD47471"
-                                    {
-                                    "Name" = "8:tiles"
-                                    "AlwaysCreate" = "11:TRUE"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "Property" = "8:_2BEB1ED3CBE845FAA1AC2ADE96EBB839"
-                                        "Folders"
-                                        {
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
             "{1525181F-901A-416C-8A58-119130FE478E}:_4A24A541B347442A8B96A73D1BC9AFCA"
             {
             "Name" = "8:#1916"
@@ -6188,6 +6130,39 @@
             "Property" = "8:DesktopFolder"
                 "Folders"
                 {
+                }
+            }
+            "{1525181F-901A-416C-8A58-119130FE478E}:_6641733F90D74149806B29EFDE4B535C"
+            {
+            "Name" = "8:#1915"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:AppDataFolder"
+                "Folders"
+                {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_C1D5BAD2F95E43AEBB47BA5C77D93B25"
+                    {
+                    "Name" = "8:NextGIS"
+                    "AlwaysCreate" = "11:TRUE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_26C17F915C034340B975845EDE1C0A33"
+                        "Folders"
+                        {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_5DBE4B08B174445ABB47CC7631F85156"
+                            {
+                            "Name" = "8:ArcQms"
+                            "AlwaysCreate" = "11:TRUE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_9E147E1473D64CA89A7A0682A1707517"
+                                "Folders"
+                                {
+                                }
+                            }
+                        }
+                    }
                 }
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_8B85F51EA044456DB3D544ACF9F1C010"
@@ -6200,17 +6175,6 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_5507ADC233604855B82541DCA01FE856"
-                    {
-                    "Name" = "8:tiles"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_0EF22ACD90B543948EF9D2B93B2619A2"
-                        "Folders"
-                        {
-                        }
-                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_A6AA45DDD5954577990DDFDD966F244C"
@@ -6241,7 +6205,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ArcQms"
         "ProductCode" = "8:{0CE04164-5239-4614-A286-3AC7349A0FD9}"
-        "PackageCode" = "8:{EDF0EDA2-DF4C-4525-8E1A-B512C6A3E430}"
+        "PackageCode" = "8:{5C8AAFA7-37E2-4E66-9728-AA3FDADF8F1C}"
         "UpgradeCode" = "8:{BC1F1D65-BCA6-4924-B5B0-93DE18B34F88}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

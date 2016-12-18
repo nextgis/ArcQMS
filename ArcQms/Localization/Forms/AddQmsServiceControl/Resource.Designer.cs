@@ -22,7 +22,7 @@ namespace ArcQms.Localization.Forms.AddQmsServiceControl {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resource {
+    public class Resource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace ArcQms.Localization.Forms.AddQmsServiceControl {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ArcQms.Localization.Forms.AddQmsServiceControl.Resource", typeof(Resource).Assembly);
@@ -51,7 +51,7 @@ namespace ArcQms.Localization.Forms.AddQmsServiceControl {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace ArcQms.Localization.Forms.AddQmsServiceControl {
         /// <summary>
         ///   Looks up a localized string similar to Metadata (map).
         /// </summary>
-        internal static string TabMapWeb {
+        public static string TabMapWeb {
             get {
                 return ResourceManager.GetString("TabMapWeb", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace ArcQms.Localization.Forms.AddQmsServiceControl {
         /// <summary>
         ///   Looks up a localized string similar to Metadata.
         /// </summary>
-        internal static string TabMetadata {
+        public static string TabMetadata {
             get {
                 return ResourceManager.GetString("TabMetadata", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace ArcQms.Localization.Forms.AddQmsServiceControl {
         /// <summary>
         ///   Looks up a localized string similar to Metadata (web).
         /// </summary>
-        internal static string TabMetadataWeb {
+        public static string TabMetadataWeb {
             get {
                 return ResourceManager.GetString("TabMetadataWeb", resourceCulture);
             }

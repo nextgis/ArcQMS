@@ -4,7 +4,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ArcQms.Forms"
-             xmlns:p="clr-namespace:ArcQms.Localization.Forms.AddQmsServiceControl"
              mc:Ignorable="d" 
              HorizontalAlignment="Stretch" VerticalAlignment="Stretch" d:DesignWidth="542.334" d:DesignHeight="292.801">
 
@@ -81,9 +80,9 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TabItem>
-            <TabItem Header="Metadata (web)">
+            <!--<TabItem Header="Metadata (web)">
                 <WebBrowser x:Name="wbMetadata" LoadCompleted="wbMetadata_LoadCompleted"/>
-            </TabItem>
+            </TabItem>-->
         </TabControl>
 
         <Grid Grid.Row="1" Grid.ColumnSpan="3">

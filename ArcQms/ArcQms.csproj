@@ -140,9 +140,7 @@
       <HintPath>lib\SqlServer\Microsoft.ExceptionMessageBox.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -204,14 +202,14 @@
       <DependentUpon>ArcQmsInstaller.cs</DependentUpon>
     </Compile>
     <Compile Include="Commands\AddQmsServiceCommand.cs" />
-    <Compile Include="Forms\AddQmsServiceControl.xaml.cs">
-      <DependentUpon>AddQmsServiceControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Forms\AddQmsServiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AddQmsServiceForm.Designer.cs">
       <DependentUpon>AddQmsServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddQmsServiceControl.xaml.cs">
+      <DependentUpon>AddQmsServiceControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\ViewModel\ModelBase.cs" />
     <Compile Include="Forms\ViewModel\QmsServiceDetailDictItem.cs" />
@@ -273,16 +271,8 @@
     <Compile Include="Libs\ArcBruTile\WorldFileWriter.cs" />
     <Compile Include="Libs\ArcBruTile\WorldToScreen.cs" />
     <Compile Include="Libs\ArcBruTile\YandexConfig.cs" />
-    <Compile Include="Localization\Forms\AddQmsServiceControl\Resource.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resource.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Localization\Forms\AddQmsServiceForm\Resource.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resource.resx</DependentUpon>
-    </Compile>
+    <Compile Include="Localization\Forms\AddQmsServiceControl\Resource.Designer.cs" />
+    <Compile Include="Localization\Forms\AddQmsServiceForm\Resource.Designer.cs" />
     <Compile Include="Localization\Menu\ArcQmsMenuDef\Resource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -315,39 +305,33 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Libs\BruTile\BruTile.Desktop.dll" />
-    <Content Include="Libs\BruTile\BruTile.Desktop.pdb" />
-    <Content Include="Libs\BruTile\BruTile.dll" />
-    <Content Include="Libs\BruTile\BruTile.pdb" />
-    <None Include="packages.config" />
-    <None Include="unregister.bat" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="unregister.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\AddQmsServiceForm.resx">
       <DependentUpon>AddQmsServiceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Localization\Forms\AddQmsServiceControl\Resource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Localization\Forms\AddQmsServiceForm\Resource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\Forms\AddQmsServiceControl\Resource.resx" />
+    <EmbeddedResource Include="Localization\Forms\AddQmsServiceForm\Resource.resx" />
     <EmbeddedResource Include="Localization\Menu\ArcQmsMenuDef\Resource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Localization\Model\QmsServiceDetail\Resource.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Localization\Model\QmsServiceInfo\Resource-ru.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource-ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Localization\Model\QmsServiceInfo\Resource.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -357,12 +341,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="register.bat" />
+    <None Include="register.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Libs\BruTile\BruTile.Desktop.dll" />
+    <Content Include="Libs\BruTile\BruTile.dll" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -401,9 +390,6 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.94.0\build\net45\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.94.0\build\net45\System.Data.SQLite.Core.targets'))" />
   </Target>
-  <PropertyGroup>
-    <PreBuildEvent>if not exist "$(TargetDir)tiles" mkdir "$(TargetDir)tiles"</PreBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
