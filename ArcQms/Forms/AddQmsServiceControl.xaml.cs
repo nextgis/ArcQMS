@@ -65,7 +65,13 @@ namespace ArcQms.Forms
 
             Dispatcher.InvokeAsync(() =>
             {
-                this.btnServiceOnMap.IsEnabled = true;
+                if (qmsServiceDetail.Type.Equals("tms", StringComparison.InvariantCultureIgnoreCase) && qmsServiceDetail.YOriginTop == true)
+                {
+                    this.btnServiceOnMap.IsEnabled = true;
+                } else
+                {
+                    this.btnServiceOnMap.IsEnabled = false;
+                }
                 var keyValues = ReflectionExtensions.GetValues<QmsServiceDetail>(qmsServiceDetail);
                 this.dgMetadata.ItemsSource = keyValues.OrderBy(kv => kv.Key);
             });
@@ -199,6 +205,12 @@ namespace ArcQms.Forms
 
         private void lbQmsServices_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            var listBox = sender as ListBox;
+            var selectedListItem = listBox.SelectedItem as QmsServiceInfo;
+            if (selectedListItem.Type != "tms")
+            {
+                return;
+            }
             this.btnServiceOnMap_Click(null, null);
         }
     }

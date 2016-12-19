@@ -69,32 +69,13 @@ namespace ArcQms.Commands
                     var url = addQmsService.QmsServiceDetail.Url;
                     var name = addQmsService.QmsServiceDetail.Name;
 
-                    EnumBruTileLayer layerType = EnumBruTileLayer.Giscloud;
-                    if (addQmsService.QmsServiceDetail.Type == "tms" &&
-                        addQmsService.QmsServiceDetail.YOriginTop)
+                    var layerType = EnumBruTileLayer.InvertedTMS;
+                    var tileLayerConfig = new TileLayerConfig(name, url);
+                    brutileLayer = new BruTileLayer(_application, tileLayerConfig, layerType)
                     {
-                        layerType = EnumBruTileLayer.InvertedTMS;
-                        var tileLayerConfig = new TileLayerConfig(name, url);
-                        brutileLayer = new BruTileLayer(_application, tileLayerConfig, layerType)
-                        {
-                            Name = name,
-                            Visible = true
-                        };
-                    }
-
-                    if (addQmsService.QmsServiceDetail.Type == "tms" &&
-                        !addQmsService.QmsServiceDetail.YOriginTop)
-                    {
-                        layerType = EnumBruTileLayer.InvertedTMS;
-                        var tileLayerConfig = new TileLayerConfig(name, url);
-                        brutileLayer = new BruTileLayer(_application, tileLayerConfig, layerType)
-                        {
-                            Name = name,
-                            Visible = true
-                        };
-                    }
-
-                    if (layerType == EnumBruTileLayer.Giscloud) return;
+                        Name = name,
+                        Visible = true
+                    };
 
                     ((IMapLayers)_map).InsertLayer(brutileLayer, true, 0);
                 }

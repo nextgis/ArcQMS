@@ -47,18 +47,24 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" x:Name="BackgroundGrid" HorizontalAlignment="Stretch">
-                            <Label Content="{Binding Name}" />
-                            <Label Content="{Binding Type}" />
+                            <Label x:Name="lblName" Content="{Binding Name}" />
+                            <Label x:Name="lblType" Content="{Binding Type}" />
                         </StackPanel>
-                        <!--<DataTemplate.Triggers>
-                            <DataTrigger Binding="{Binding Type}" Value="tms">
-                                <Setter TargetName="BackgroundGrid" Property="Background" Value="Red"/>
+                        <DataTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Type}" Value="wms">
+                                <Setter TargetName="lblName" Property="Foreground" Value="Gray"/>
+                                <Setter TargetName="lblType" Property="Foreground" Value="Gray"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Type}" Value="geojson">
+                                <Setter TargetName="lblName" Property="Foreground" Value="Gray"/>
+                                <Setter TargetName="lblType" Property="Foreground" Value="Gray"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Type}" Value="wfs">
+                                <Setter TargetName="lblName" Property="Foreground" Value="Gray"/>
+                                <Setter TargetName="lblType" Property="Foreground" Value="Gray"/>
                             </DataTrigger>
 
-                            <DataTrigger Binding="{Binding Type}" Value="wms">
-                                <Setter TargetName="BackgroundGrid" Property="Background" Value="Green"/>
-                            </DataTrigger>
-                        </DataTemplate.Triggers>-->
+                        </DataTemplate.Triggers>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
