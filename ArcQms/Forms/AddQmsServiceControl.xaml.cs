@@ -194,5 +194,10 @@ namespace ArcQms.Forms
             this.viewQmsSerices.Refresh();
 
         }
+
+        private void lbQmsServices_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            this.btnServiceOnMap_Click(null, null);
+        }
     }
 }

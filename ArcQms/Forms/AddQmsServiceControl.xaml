@@ -43,7 +43,7 @@
 
 
             <ListBox x:Name="lbQmsServices" Grid.Row="1" 
-                     SelectionChanged="lbQmsServices_OnSelection">
+                     SelectionChanged="lbQmsServices_OnSelection" MouseDoubleClick="lbQmsServices_MouseDoubleClick">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" x:Name="BackgroundGrid" HorizontalAlignment="Stretch">
@@ -86,7 +86,11 @@
         </TabControl>
 
         <Grid Grid.Row="1" Grid.ColumnSpan="3">
-            <Button x:Name="btnServiceOnMap" IsEnabled="False" HorizontalAlignment="Right" Content="Добавить сервис на карту" Margin="5" Padding="3" Click="btnServiceOnMap_Click"/>
+            <Button x:Name="btnServiceOnMap" 
+                    IsEnabled="False" 
+                    HorizontalAlignment="Right" 
+                    Content="Add service to map" 
+                    Margin="5" Padding="3" Click="btnServiceOnMap_Click"/>
         </Grid>
 
 
