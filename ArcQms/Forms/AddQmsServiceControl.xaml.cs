@@ -188,7 +188,9 @@ namespace ArcQms.Forms
                 this.viewQmsSerices.Filter = new Predicate<object>(x =>
                 {
                     var qmsServiceInfo = x as QmsServiceInfo;
-                    return (string.IsNullOrEmpty(qmsServiceInfo.Name) ? false : qmsServiceInfo.Name.IndexOf(textBox.Text, StringComparison.OrdinalIgnoreCase) >= 0);
+                    var containsName = string.IsNullOrEmpty(qmsServiceInfo.Name) ? false : qmsServiceInfo.Name.IndexOf(textBox.Text, StringComparison.OrdinalIgnoreCase) >= 0;
+                    var containsDescription = string.IsNullOrEmpty(qmsServiceInfo.Description) ? false : qmsServiceInfo.Description.IndexOf(textBox.Text, StringComparison.OrdinalIgnoreCase) >= 0;
+                    return (containsName || containsDescription);
                 });
             }
             this.viewQmsSerices.Refresh();
