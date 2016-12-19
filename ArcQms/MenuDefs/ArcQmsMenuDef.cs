@@ -29,7 +29,7 @@ namespace ArcQms.MenuDefs
 
         public string Name
         {
-            get { return "ArcQms"; }
+            get { return "ArcQMS"; }
         }
     }
 }

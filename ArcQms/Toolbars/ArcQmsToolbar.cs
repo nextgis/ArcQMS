@@ -29,7 +29,7 @@ namespace ArcQms.Toolbars
         {
             get
             {
-                return "ArcQms";
+                return "ArcQMS";
             }
         }
 
@@ -37,7 +37,7 @@ namespace ArcQms.Toolbars
         {
             get
             {
-                return "ArcQms toolbar";
+                return "ArcQMS toolbar";
             }
         }
 
